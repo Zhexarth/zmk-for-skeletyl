@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
 
@@ -120,32 +119,32 @@
         };
 
         Left-En-punctuation {
-            bindings = <&mo 1>;
+            bindings = <&mo 0>;
             key-positions = <12 13>;
         };
 
         Right-En-punctuation {
-            bindings = <&mo 1>;
+            bindings = <&mo 0>;
             key-positions = <17 16>;
         };
 
         Right-Zh-punctuation {
-            bindings = <&mo 3>;
+            bindings = <&mo 0>;
             key-positions = <6 7>;
         };
 
         Left-Zh-punctuation {
-            bindings = <&mo 3>;
+            bindings = <&mo 0>;
             key-positions = <3 2>;
         };
 
         Right-Number {
-            bindings = <&mo 2>;
+            bindings = <&mo 0>;
             key-positions = <27 26>;
         };
 
         Left-Number {
-            bindings = <&mo 2>;
+            bindings = <&mo 0>;
             key-positions = <22 23>;
         };
     };
@@ -179,34 +178,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
-&kp Q                     &kp W                          &kp E                 &kp R             &kp T      &kp Y                 &kp U              &kp I        &kp O            &kp P
-&hm LEFT_GUI A            &hm LEFT_ALT S                 &hm LCTRL D           &hm LEFT_SHIFT F  &kp G      &kp H                 &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &kp UP
-&kp Z                     &kp X                          &kp C                 &kp V             &kp B      &kp N                 &kp M              &kp COMMA    &kp PERIOD       &kp DOWN
-                &kp LEFT                  &kp BACKSPACE               &kp TAB                    &kp ENTER  &kp SPACE  &kp RIGHT
-            >;
-        };
-
-        En-punctuation {
-            bindings = <
-&kp N1             &kp N2             &kp N3             &kp N4     &kp N5         &kp N6            &kp N7     &kp N8     &kp N9  &kp N0
-&kp LC(A)          &kp LC(S)          &kp LC(D)          &kp LC(F)  &kp F12        &kp MINUS         &kp EQUAL  &kp GRAVE  &trans  &kp SQT
-&kp LC(Z)          &kp LC(X)          &kp LC(C)          &kp LC(V)  &kp LC(SPACE)  &trans            &trans     &trans     &trans  &trans
-           &trans             &trans             &trans             &trans         &kp RSHFT  &mo 4
-            >;
-        };
-
-        Num {
-            bindings = <
-&kp ESC             &kp KP_NUMBER_7          &kp KP_NUMBER_8          &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans            &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &trans
-&kp CAPS            &kp KP_NUMBER_4          &kp KP_NUMBER_5          &kp KP_NUMBER_6  &kp AT           &kp HOME          &kp LEFT     &kp DOWN      &kp RIGHT      &trans
-&kp DELETE          &kp KP_NUMBER_1          &kp KP_NUMBER_2          &kp KP_NUMBER_3  &kp DOT          &kp END           &trans       &trans        &trans         &trans
-            &trans                   &trans                   &trans                   &trans           &trans    &trans
-            >;
-        };
-
-        Zh-punctuation {
+        Letters {
             bindings = <
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
@@ -215,16 +187,7 @@
             >;
         };
 
-        layer_4 {
-            bindings = <
-&bt BT_SEL 0          &bt BT_SEL 1            &bt BT_SEL 2          &bt BT_SEL 3  &bt BT_SEL 4  &trans          &trans  &trans  &trans  &trans
-&bt BT_CLR            &bt BT_CLR_ALL          &trans                &trans        &trans        &trans          &trans  &trans  &trans  &trans
-&trans                &trans                  &trans                &trans        &trans        &trans          &trans  &trans  &trans  &trans
-              &trans                  &trans                &trans                &trans        &trans  &trans
-            >;
-        };
-
-        layer_5 {
+        layer_1 {
             bindings = <
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
@@ -233,7 +196,7 @@
             >;
         };
 
-        layer_6 {
+        layer_2 {
             bindings = <
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
@@ -242,21 +205,12 @@
             >;
         };
 
-        layer_7 {
+        layer_3 {
             bindings = <
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
 &trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
         &trans          &trans          &trans          &trans  &trans  &trans
-            >;
-        };
-
-        layer_8 {
-            bindings = <
-&kp Q                     &kp W                          &kp E                 &kp R             &kp T      &kp Y                 &kp U              &kp I        &kp O            &kp P
-&hm LEFT_GUI A            &hm LEFT_ALT S                 &hm LCTRL D           &hm LEFT_SHIFT F  &kp G      &kp H                 &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &kp UP
-&kp Z                     &kp X                          &kp C                 &kp V             &kp B      &kp N                 &kp M              &kp COMMA    &kp PERIOD       &kp DOWN
-                &kp LEFT                  &kp BACKSPACE               &kp TAB                    &kp ENTER  &kp SPACE  &kp RIGHT
             >;
         };
     };
