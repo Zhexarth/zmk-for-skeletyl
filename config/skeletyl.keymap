@@ -175,15 +175,31 @@
         };
     };
 
+    macros {
+        Zh_comma: Zh_comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(PERIOD) &kp COMMA &kp LC(PERIOD)>;
+            label = "ZH_COMMA";
+        };
+
+        Zh_period: Zh_period {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(PERIOD) &kp PERIOD &kp LC(PERIOD)>;
+            label = "ZH_PERIOD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Letters {
             bindings = <
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-        &trans          &trans          &trans          &trans  &trans  &trans
+&mt Q LS(Q)            &mt W LS(W)                 &mt E LS(E)                   &mt R LS(R)  &mt T LS(T)          &mt Y LS(Y)             &mt U LS(U)  &mt I LS(I)      &mt O LS(O)        &mt P LS(P)
+&mt A LS(A)            &mt S LS(S)                 &mt D LS(D)                   &mt F LS(F)  &mt G LS(G)          &mt H LS(H)             &mt J LS(J)  &mt K LS(K)      &mt L LS(L)        &kp UP
+&mt Z LS(Z)            &mt X LS(X)                 &mt C LS(C)                   &mt V LS(V)  &mt B LS(B)          &mt N LS(N)             &mt M LS(M)  &mt COMMA COMMA  &mt PERIOD PERIOD  &kp DOWN
+             &kp LEFT               &kp BACKSPACE               &mt TAB LS(TAB)               &mt ENTER LS(ENTER)  &kp SPACE    &kp RIGHT
             >;
         };
 
