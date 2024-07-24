@@ -119,32 +119,32 @@
         };
 
         Left-En-punctuation {
-            bindings = <&mo 0>;
+            bindings = <&mo 1>;
             key-positions = <12 13>;
         };
 
         Right-En-punctuation {
-            bindings = <&mo 0>;
+            bindings = <&mo 1>;
             key-positions = <17 16>;
         };
 
         Right-Zh-punctuation {
-            bindings = <&mo 0>;
+            bindings = <&mo 2>;
             key-positions = <6 7>;
         };
 
         Left-Zh-punctuation {
-            bindings = <&mo 0>;
+            bindings = <&mo 2>;
             key-positions = <3 2>;
         };
 
         Right-Number {
-            bindings = <&mo 0>;
+            bindings = <&mo 3>;
             key-positions = <27 26>;
         };
 
         Left-Number {
-            bindings = <&mo 0>;
+            bindings = <&mo 3>;
             key-positions = <22 23>;
         };
     };
@@ -196,19 +196,19 @@
 
         Letters {
             bindings = <
-&mt Q LS(Q)            &mt W LS(W)                 &mt E LS(E)                   &mt R LS(R)  &mt T LS(T)          &mt Y LS(Y)             &mt U LS(U)  &mt I LS(I)      &mt O LS(O)        &mt P LS(P)
-&mt A LS(A)            &mt S LS(S)                 &mt D LS(D)                   &mt F LS(F)  &mt G LS(G)          &mt H LS(H)             &mt J LS(J)  &mt K LS(K)      &mt L LS(L)        &kp UP
-&mt Z LS(Z)            &mt X LS(X)                 &mt C LS(C)                   &mt V LS(V)  &mt B LS(B)          &mt N LS(N)             &mt M LS(M)  &mt COMMA COMMA  &mt PERIOD PERIOD  &kp DOWN
-             &kp LEFT               &kp BACKSPACE               &mt TAB LS(TAB)               &mt ENTER LS(ENTER)  &kp SPACE    &kp RIGHT
+&mt LS(Q) Q            &mt LS(W) W                 &mt LS(E) E                   &mt LS(R) R  &mt LS(T) T          &mt LS(Y) Y             &mt LS(U) U  &mt LS(I) I      &mt LS(O) O        &mt LS(P) P
+&mt LS(A) A            &mt LS(S) S                 &mt LS(D) D                   &mt LS(F) F  &mt LS(G) G          &mt LS(H) H             &mt LS(J) J  &mt LS(K) K      &mt LS(L) L        &kp UP
+&mt LS(Z) Z            &mt LS(X) X                 &mt LS(C) C                   &mt LS(V) V  &mt LS(B) B          &mt LS(N) N             &mt LS(M) M  &mt COMMA COMMA  &mt PERIOD PERIOD  &kp DOWN
+             &kp LEFT               &kp BACKSPACE               &mt LS(TAB) TAB               &mt LS(ENTER) ENTER  &kp SPACE    &kp RIGHT
             >;
         };
 
-        layer_1 {
+        En-p {
             bindings = <
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-        &trans          &trans          &trans          &trans  &trans  &trans
+&kp PIPE               &kp CARET             &kp TILDE               &kp AMPERSAND  &mt GRAVE SQT               &mt RIGHT_BRACKET LEFT_BRACKET                   &kp DOLLAR            &none         &none            &kp DELETE
+&kp SLASH              &kp ASTERISK          &kp MINUS               &kp PLUS       &kp DOUBLE_QUOTES           &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS           &kp AT_SIGN           &kp QUESTION  &kp EXCLAMATION  &kp PAGE_UP
+&kp PERCENT            &kp HASH              &kp UNDERSCORE          &kp EQUAL      &mt RIGHT_BRACE LEFT_BRACE  &mt GREATER_THAN LESS_THAN                       &kp NON_US_BACKSLASH  &kp SEMI      &kp COLON        &kp PAGE_DOWN
+             &kp HOME                &trans                  &trans                 &trans                      &trans                                  &kp END
             >;
         };
 
@@ -221,12 +221,12 @@
             >;
         };
 
-        layer_3 {
+        Numbers {
             bindings = <
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-&trans          &trans          &trans          &trans  &trans  &trans          &trans  &trans  &trans  &trans
-        &trans          &trans          &trans          &trans  &trans  &trans
+&kp F1          &kp F2          &kp F3          &kp F4  &kp F5   &kp F6           &kp F7  &kp F8  &kp F9  &kp F10
+&kp N1          &kp N2          &kp N3          &kp N4  &kp N5   &kp N6           &kp N7  &kp N8  &kp N9  &kp N0
+&trans          &trans          &trans          &trans  &kp F11  &kp F12          &trans  &trans  &trans  &trans
+        &trans          &trans          &trans          &trans   &trans   &trans
             >;
         };
     };
